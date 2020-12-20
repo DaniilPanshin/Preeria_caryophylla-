@@ -1,4 +1,4 @@
-# Preeria_caryophylla-
+# Preeria_caryophylla
 
 The task of the project was assembly the genome of the bacterium Preeria Caryophilla and then analyze it.
 
