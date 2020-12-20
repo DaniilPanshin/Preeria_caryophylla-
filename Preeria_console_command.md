@@ -19,7 +19,7 @@
 
 <pre><code>proteinortho -cpus=16 -ram=25 -project=preeria *.faa 40-19</code></pre>
 
-###Prokka
+#### Prokka
 
 <pre><code>prokka --outdir mydir --prefix mygenome /Bmo/jyakovleva/parampampam/genomes/PGD/data/split/subassembly_three_rounds/assembly.fasta</code></pre>
 
