@@ -10,17 +10,17 @@ Goals of the project:
 4. Search for orthologs between Holosporales representatives
 
 In this project we used next programms:
-1. Flye
-2. Kaidju
-3. Minimap
-4. Quast
-5. Proteinortho
-6. Pilon
-7. Nanoflit
-8. BWA
-9. Prokka
-10. Prodigal
-11. Diamond
+1. Flye (v2.8.2)
+2. Kaidju (v1.7.3)
+3. Minimap2 (v2.17)
+4. Quast (v5.0.2)
+5. Proteinortho (v6)
+6. Pilon (v1.2.3)
+7. Nanoflit (v2.5.0)
+8. BWA(v0.7.17)
+9. Prokka (v1.14.5)
+10. Prodigal (v2.6.3)
+11. Diamond (v4.0.515)
 12. OrthoVenn2
-13. Racon
-14. Medaka
+13. Racon (v1.4.3)
+14. Medaka (v1.2.0)
