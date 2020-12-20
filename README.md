@@ -1,6 +1,13 @@
 # Preeria_caryophylla
 
-The task of the project was assembly the genome of the bacterium Preeria Caryophilla and then analyze it.
+The main task of the project was assembly the genome of the bacterium Preeria Caryophilla and then analyze it.
+
+Goals of the project:
+
+1. Preprocess data
+2. Assembly genome
+3. Genome annotation 
+4. Search for orthologs between Holosporales representatives
 
 In this project we used next programms:
 1. Flye
