@@ -5,19 +5,19 @@ date: "15 12 2020"
 output: html_document
 ---
 
-Flye assembler
-``` {}
-flye --meta --nano-raw /Bmo/jyakovleva/parampampam/genomes/PGD/data/nanopore_length_filtering/len1000_filtered.fastq \ 
+###Flye assembler
+
+<pre><code>flye --meta --nano-raw /Bmo/jyakovleva/parampampam/genomes/PGD/data/nanopore_length_filtering/len1000_filtered.fastq \ 
 --out-dir /Bmo/jyakovleva/Panshin/out_nano/assembly.fasta -t 32
-```
-Minimap
-``` {}
-minimap2 -t 32 -ax map-ont /Bmo/jyakovleva/Panshin/out_nano/assembly.fasta \ 
+
+###Minimap
+
+<pre><code>minimap2 -t 32 -ax map-ont /Bmo/jyakovleva/Panshin/out_nano/assembly.fasta \ 
 /Bmo/jyakovleva/Panshin/oper/len1000_filtered.fastq > /Bmo/jyakovleva/Panshin/oper/aln1.sam
-```
+
 Quast
 ``` {}
-quast.py -o /Bmo/jyakovleva/Panshin/oper/quast_output -r /Bmo/jyakovleva/Panshin/oper/len1000_filtered.fastq \
+<pre><code>quast.py -o /Bmo/jyakovleva/Panshin/oper/quast_output -r /Bmo/jyakovleva/Panshin/oper/len1000_filtered.fastq \
 -g /Bmo/jyakovleva/Panshin/oper/first_cycle/medaka_1/consensus.fasta /Bmo/jyakovleva/Panshin/oper/second_circle/medaka_11/consensus.fasta \ 
 /Bmo/jyakovleva/Panshin/oper/third_cycle/medaka_3/consensus.fasta
 ```
