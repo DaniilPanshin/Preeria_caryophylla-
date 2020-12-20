@@ -1,0 +1,45 @@
+---
+title: "Assembly and analysis of Preeria caryophylla genome"
+author: "Panshin Dannil"
+date: "15 12 2020"
+output: html_document
+---
+
+Flye assembler
+``` {}
+flye --meta --nano-raw /Bmo/jyakovleva/parampampam/genomes/PGD/data/nanopore_length_filtering/len1000_filtered.fastq \ 
+--out-dir /Bmo/jyakovleva/Panshin/out_nano/assembly.fasta -t 32
+```
+Minimap
+``` {}
+minimap2 -t 32 -ax map-ont /Bmo/jyakovleva/Panshin/out_nano/assembly.fasta \ 
+/Bmo/jyakovleva/Panshin/oper/len1000_filtered.fastq > /Bmo/jyakovleva/Panshin/oper/aln1.sam
+```
+Quast
+``` {}
+quast.py -o /Bmo/jyakovleva/Panshin/oper/quast_output -r /Bmo/jyakovleva/Panshin/oper/len1000_filtered.fastq \
+-g /Bmo/jyakovleva/Panshin/oper/first_cycle/medaka_1/consensus.fasta /Bmo/jyakovleva/Panshin/oper/second_circle/medaka_11/consensus.fasta \ 
+/Bmo/jyakovleva/Panshin/oper/third_cycle/medaka_3/consensus.fasta
+```
+Proteinortho
+``` {}
+proteinortho -cpus=16 -ram=25 -project=preeria *.faa 40-19 
+```
+Prokka
+``` {}
+
+```
+Racon
+``` {}
+/Bmo/jyakovleva/Programs/racon/build/bin/racon -t 32 /Bmo/jyakovleva/Panshin/oper/len1000_filtered.fastq /Bmo/jyakovleva/Panshin/oper/aln1.sam \ 
+/Bmo/jyakovleva/Panshin/out_nano/assembly.fasta > /Bmo/jyakovleva/Panshin/oper/racon2true.fasta
+```
+Medaka
+``` {}
+medaka_consensus -i /Bmo/jyakovleva/Panshin/oper/len1000_filtered.fastq -d /Bmo/jyakovleva/Panshin/oper/racon2true.fasta -o \
+/Bmo/jyakovleva/Panshin/oper/medaka_1 -t 32 -m r941_min_high_g303
+```
+
+``` {}
+
+```
