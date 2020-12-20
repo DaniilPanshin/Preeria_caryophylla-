@@ -39,6 +39,18 @@ Medaka
 medaka_consensus -i /Bmo/jyakovleva/Panshin/oper/len1000_filtered.fastq -d /Bmo/jyakovleva/Panshin/oper/racon2true.fasta -o \
 /Bmo/jyakovleva/Panshin/oper/medaka_1 -t 32 -m r941_min_high_g303
 ```
+BWA
+``` {}
+ bwa mem ref.fa read1.fq read2.fq > aln-pe.sam
+```
+Prodigal
+``` {}
+prodigal -i my.genome.fna -o my.genes -a my.proteins.faa
+```
+
+``` {}
+
+```
 
 ``` {}
 
