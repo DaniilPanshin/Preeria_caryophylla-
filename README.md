@@ -27,11 +27,13 @@ In this project we used next programms:
 
 
 ![alt text](https://github.com/DaniilPanshin/Preeria_caryophylla-/blob/main/ortho.png)
+
 Fig.1 Orthologous groups of representatives of holosporacea
 
 
 
 ![alt text](https://github.com/DaniilPanshin/Preeria_caryophylla-/blob/main/heat_map.png)
+
 Fig.2 Ortholog heatmap of Holosporales representatives
 
 
